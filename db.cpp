@@ -69,7 +69,7 @@ vector<Vertex*> findSCC_Belong_Vertex(const string& word) {
     for (const auto& tmp : SCC_LIST) {
         for (Vertex* v : tmp) {
             if (v->data == word){
-                for (Vertex* llll : v->edgeFrom) cout << llll->data << endl;
+                //for (Vertex* llll : v->edgeFrom) cout << llll->data << endl;
                 return tmp;
             }
         }
