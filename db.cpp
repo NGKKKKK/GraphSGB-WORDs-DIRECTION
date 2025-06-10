@@ -149,11 +149,11 @@ int main(){
     vector<Vertex*> findSCC = findSCC_Belong_Vertex(findWord);
     if (findSCC.empty()){
         cout << "Lỗi từ đầu vào không hợp lệ" << endl;
-        return 0;
-    }
+    }else{
     cout << "Các đỉnh cùng thành phần liên thông mạnh với " << findWord << " là: ";
     for (Vertex* k : findSCC){
         if (k->data != findWord) cout << k->data << " ";
+    }
     }
     cout << endl;
     cout << "c) " << endl;
@@ -177,5 +177,6 @@ int main(){
     for (int i = sz_-1; i > 0; --i) cout << ans2[i]->data << " -> ";
     cout << ans2[0]->data;
     cout << endl;
+    for (Vertex* kl : Graph) delete kl;
     return 0;
 }
